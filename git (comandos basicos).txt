@@ -1,0 +1,58 @@
+09-07
+Aprendendo a mexer no git (via terminal linux)
+
+git init (dentro do diretorio que vou utilizar)
+touch tralala.txt #criei um arquivo
+git add tralala.txt #digo ao git para passar a monitorar esse arquivo
+git status # vejo se existe algo alterado, alguma modificacao pendendte
+git commit tralala.txt #cria uma revisao desses arquivos monitorados belo git com um numero
+nano tralala.txt #digamos que alterei o bendito
+git add tralala.txt #se eu nao der esse comando de novo, o git vai considerar a versao antiga do arquivo... lol
+	se eu der um git status e nao der add antes, o git acusa
+	que um arquivo monitorado foi modificado, mas ainda nao foi selecionado (staged).
+
+git commit -m "Alteirei o tralala.txt, breve comentario" #mesma coisa, dessa vez com comentarios
+
+git status #pra dar uma olhadinha e ver se tem algo na fila
+
+git push #publica os commits no github. Note que nao clonei nenhum diretorio ou algo
+	  do tipo, então creio que n vai acontecer nd... nao testei alias
+git pull #puxa o que tem na pasta do git pra sua pasta local... o contrario do pull
+
+Comando util: git help
+
+09-07(PARTE 2)
+Clonando e trabalhando com repositorios remotos no git
+
+git clone #cria um diretorio que tem td conteudo do projeto q vc copiou
+git remote -v #da informacoes do diretorio remoto
+git push origin master #envia alteracoes pro servidor (depois de devidamente alteradas e comitadas)
+
+Fiz um arquivo implementando operacoes aritmeticas simples
+
+	Vá ao diretório
+	git add calculadora.rb
+	git status
+	git commit -m "desafio terminado"
+	git push origin master
+
+Tambem rodei um tal de rspec pra testar as fita
+
+Usei o cd .. pra voltar um diretorio (comandinho util da shell)
+
+git remote -v (Mostra que existe um repositorio remoto, e as op.
+		podemos fazer nele)
+
+
+27-09
+
+Mexendo com branches
+git checkout "Nome_do_branch" # troca de branch, que e uma especie de
+	      ramificacao do prog. principal. Da pra vc ir mexendo nele
+	      sem alterar o codigo principal.
+git checkout master # voltei pro branch principal (pode ter qlqr nome, nao necessariamente master)
+
+Estando no branch secundario e querendo trazer as alteracoes do master pra esse branch, podemos
+utilizar o comando merge:
+
+git merge master # veja que, caso existam alteracoes, pode gerar conflito... estou com preguica entao ja deu por hj :)
